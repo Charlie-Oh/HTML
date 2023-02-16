@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>naver 회원가입</title>
+    <style>
+        body {
+            background-color: #f5f6f7;
+            text-align: center;
+            margin: 0 auto;
+            font-family: "돋움";
+        }
+
+        .id,
+        .pwd,
+        .name,.email {
+            width: 460px;
+            height: 29px;
+            padding-right: 25px;
+            border: none;
+            background-color: #fff;
+            font-size: 15px;
+        }
+
+        .gender,
+        .con {
+            width: 490px;
+            height: 29px;
+            padding-right: 25px;
+            border: none;
+            background: #fff;
+            font-size: 15px;
+        }
+
+        input::placeholder {
+            font-weight: lighter;
+        }
+
+        .id::placeholder {
+            text-align: right;
+            font-weight: lighter;
+            color:rgba(0,0,0,0.3);
+        }
+
+        h3 {
+            width: 490px;
+            margin: 8px auto;
+            text-align: left;
+        }
+
+        span,
+        div {
+            margin: 0 auto;
+        }
+
+        input:focus{
+            outline:1px solid #03c75a;
+        }
+
+        select:focus{
+            outline:1px solid #03c75a;
+        }
+    </style>
+
+</head>
+
+<form>
+<body>
+    <a href="https://www.naver.com"><img src="https://ssl.pstatic.net/static/nid/join/m_logo_naver.png"
+            style="width:240px; height:44px; margin:auto; padding:59px 0px 20px; display:inline-block;"></a>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">아이디</h3>
+        <span style="outline:0; height:51px;">
+            <input type="text" id="id" name="id" required class="id" maxlength="20" placeholder="@naver.com"
+                style="height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+            </input>
+        </span>
+    </div>
+
+    <br>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">비밀번호</h3>
+        <span style="outline:0; height:51px;">
+            <input type="text" id="pwd" name="pwd" required class="pwd" maxlength="20"
+                style="height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+            </input>
+        </span>
+    </div>
+
+    <br>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">비밀번호 재확인</h3>
+        <span style="outline:0; height:51px;">
+            <input type="text" id="pwd" name="pwd"required  class="pwd" maxlength="20"
+                style="height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+            </input>
+        </span>
+    </div>
+
+    <br><br>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">이름</h3>
+        <span style="outline:0; height:51px;">
+            <input type="text" id="name" name="name" required class="name" maxlength="20"
+                style="height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+            </input>
+        </span>
+    </div>
+
+    <br>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">생년월일</h3>
+        <span style="outline:0; width:290px; height:51px;">
+            <input type="text" id="year" name="year" required class="year" maxlength="4" pattern=[1-2]+[0-9]+[0-9]+[0-9] placeholder="&nbsp;&nbsp;년(4자)"
+                style="display:inline-block; height:51px; width:150px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+            </input>
+        </span>
+
+        <span style="outline:0; height:51px;">
+            <select id="mon" name="mon" class="mon" required=required
+            style="display:inline-block; margin:0 6.5px 0 6.5px; height:56px; width:150px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+                <option value="month">&nbsp;&nbsp;월</option>
+                <option value="January">&nbsp;&nbsp;1</option>
+                <option value="February">&nbsp;&nbsp;2</option>
+                <option value="March">&nbsp;&nbsp;3</option>
+                <option value="April">&nbsp;&nbsp;4</option>
+                <option value="May">&nbsp;&nbsp;5</option>
+                <option value="June">&nbsp;&nbsp;6</option>
+                <option value="July">&nbsp;&nbsp;7</option>
+                <option value="August">&nbsp;&nbsp;8</option>
+                <option value="September">&nbsp;&nbsp;9</option>
+                <option value="October">&nbsp;&nbsp;10</option>
+                <option value="November">&nbsp;&nbsp;11</option>
+                <option value="December">&nbsp;&nbsp;12</option>
+            </select>
+        </span>
+
+        <span style="outline:0; height:51px;">
+            <input type="text" id="day" name="day" required class="day" maxlength="2" pattern="[0-3]+[0-9]" title="일자를 확인해주세요." placeholder="&nbsp;&nbsp;일"
+                style="display:inline-block; height:51px; width:150px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+            </input>
+        </span>
+
+    </div>
+
+    <br>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">성별</h3>
+        <span style="outline:0; height:51px;">
+            <select id="gender" name="gender" required class="gender"
+                style="height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+                <option value="gender">&nbsp;&nbsp;성별</option>
+                <option value="male">&nbsp;&nbsp;남자</option>
+                <option value="Female">&nbsp;&nbsp;여자</option>
+                <option value="other">&nbsp;&nbsp;선택 안함</option>
+            </select>
+        </span>
+    </div>
+
+    <br>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">본인 확인 이메일<small style="color:#828282;font-size:12px;font-weight:lighter;">(선택)</small>
+        </h3>
+        <span style="outline:0; height:51px;">
+            <input type="email" id="email" name="email" class="email" maxlength="20" pattern="[a-zA-Z0-9]+[@][a-zA-Z0-9]+[.]+[a-zA-Z]+[.]*[a-zA-Z]*" title="이메일을 확인해주세요." placeholder="&nbsp;&nbsp;선택입력"
+                style="height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+            </input>
+        </span>
+    </div>
+
+    <br><br>
+
+    <div>
+        <h3 style="font-size:14px; font-weight:700;">휴대전화</h3>
+        <span style="outline:0; height:51px;">
+            <select id="con" name="con" class="con" required 
+                style="height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+                <option value="+1">&nbsp;&nbsp;미국/캐나다 +1</option>
+                <option value="+61">&nbsp;&nbsp;호주 +61</option>
+                <option value="+82" selected>&nbsp;&nbsp;대한민국 +82 </option>
+            </select>
+        </span>
+
+        <br><br>
+
+        <span style="outline:0; height:51px;">
+            <input type="text" pattern="(010)+[0-9]+[0-9]" id="tel" name="tel" class="tel" required maxlength="20" title="전화번호를 확인해주세요." placeholder="&nbsp;&nbsp;전화번호 입력"
+                style="width:350px; height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+        </span>
+
+
+        <span style="outline:0; height:51px;">
+            <button
+                style="vertical-align:middle; color:white; font-weight:bold; font-size:16px; text-align:center; border-style:none; background-color: #03c75a; height:56px; width:127px;">인증번호
+                받기</button>
+        </span>
+        <br><br>
+
+        <span style="outline:0; height:51px;">
+            <input type="text" maxlength="20" disabled placeholder="&nbsp;&nbsp;인증번호 입력하세요"
+                style="width:483px; background-color:#f5f6f7; height:51px; border-style:solid; border-color:rgb(203, 203, 203); border-width:2px;">
+        </span>
+    </div>
+
+    <br>
+
+    <span style="outline:0; height:51px;">
+        <button type="submit" style="margin:10px; width:490px; color:white; font-weight:bold; font-size:20px; text-align:center; background-color: #03c75a; border-style:none; height:58px;">가입하기</button>
+    </span>
+    
+</form>
+
+</body>

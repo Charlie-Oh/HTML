@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>float 속성</title>
+    <style>
+        .divClass {
+            float: left;
+            padding: 15px;
+        }
+
+        .div1 {
+            background: red;
+        }
+
+        .div2 {
+            background: yellow;
+        }
+
+        .div3 {
+            background: green;
+        }
+
+        p {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Float 사용의 다른 방법</h2>
+    <div class="div1 divClass">Div 1</div>
+    <div class="div2 divClass">Div 2</div>
+    <div class="div2 divClass" style="clear:left;">Div 2</div>
+    <!-- <div class="div2 divClass">Div 2</div> -->
+    <div class="div3 divClass">Div 3</div>
+    <p>Float 사용의 다른 방법</p>
+    <p>Float 사용의 다른 방법</p>
+    <div class="div1 divClass">Div 1</div>
+    <div class="div2 divClass">Div 2</div>
+    <div class="div3 divClass">Div 3</div>
+</body>
+
+</html>
