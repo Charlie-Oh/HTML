@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>시멘틱요소를 이용한 Layout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/css03_d_layout.css">
+</head>
+
+<body>
+
+    <h2>CSS Layout Float</h2>
+    <ul>
+        <li>&lt;header&gt; - 문서 또는 섹션에 대한 헤더를 정의</li>
+        <li>&lt;nav&gt; - 탐색 링크 집합(메뉴바, 네비게이션)을 정의</li>
+        <li>&lt;section&gt; - 문서에서 섹션(내용이나 단락의 집합)을 정의</li>
+        <li>&lt;article&gt; - 독립적인 내용을 정의</li>
+        <li>&lt;footer&gt; - 문서 또는 섹션에 대한 바닥글 정의. 제작정보나 저작권정보, 기업 정보 표시</li>
+    </ul>
+
+    <header>
+        <h2>header 부분</h2>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li>section의 nav의 ul -li - a부분</li>
+                <li><a href="#ld">London</a></li>
+                <li><a href="#pr]">Paris</a></li>
+                <li><a href="#tk">Tokyo</a></li>
+            </ul>
+        </nav>
+        <article style="overflow-y:scroll;">
+            <h1 id="ld">London</h1>
+            <p>런던은 영국의 수도이다. 런던은 영국의 수도이다.런던은 영국의 수도이다.런던은 영국의 수도이다.</p>
+            <p>런던은 영국의 수도이다.런던은 영국의 수도이다.런던은 영국의 수도이다.런던은 영국의 수도이다.</p>
+            <p>런던은 영국의 수도이다.런던은 영국의 수도이다.런던은 영국의 수도이다.런던은 영국의 수도이다.</p>
+            <p>런던은 영국의 수도이다.런던은 영국의 수도이다.런던은 영국의 수도이다.런던은 영국의 수도이다.</p>
+            <h1 id="pr">Paris</h1>
+            <p>파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!</p>
+            <p>파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!</p>
+            <p>파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!</p>
+            <p>파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!파리는 그 자체로 하나의 세계를 이룬다!</p>
+            <h1 id="tk">Tokyo</h1>
+            <p>도쿄는 일본 혼슈 동부에 있는 메이지 시대 이후 사실상 일본의 수도이자 최대 도시이다.</p>
+            <p>도쿄는 일본 혼슈 동부에 있는 메이지 시대 이후 사실상 일본의 수도이자 최대 도시이다.</p>
+            <p>도쿄는 일본 혼슈 동부에 있는 메이지 시대 이후 사실상 일본의 수도이자 최대 도시이다.</p>
+            <p>도쿄는 일본 혼슈 동부에 있는 메이지 시대 이후 사실상 일본의 수도이자 최대 도시이다.</p>
+        </article>
+    </section>
+
+    <footer><p>Footer</p></footer>
+</body>
+
+</html>

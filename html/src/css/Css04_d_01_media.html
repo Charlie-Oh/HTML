@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .wrapper {
+            overflow: auto;
+        }
+
+        #main {
+            margin-left: 4px;
+        }
+
+        #menulist {
+            margin: 0;
+            padding: 0;
+        }
+
+        .menuitem {
+            background: #cdf0f6;
+            border: 1px solid#d4d4d4;
+            border-radius: 4px;
+            list-style-type: none;
+            margin: 4px;
+            padding: 2px;
+        }
+
+        /* width가 600px이상인 화면에 적용 */
+        /* @media screen and (min-width:600px){
+            #leftsidebar{width:200px;float:left;}
+            #main{margin-left:216px;}
+        } */
+
+        /* @media all and (min-width:600px) {
+            #leftsidebar {
+                width: 200px;
+                float: left;
+            }
+
+            #main {
+                margin-left: 216px;
+            }
+        } */
+
+        /* 화면의 width가 600px이상 900px이하인 경우 적용 */
+        @media screen and (min-width:600px) and (max-width:900px) {
+            #leftsidebar {
+                width: 200px;
+                float: left;
+            }
+
+            #main {
+                margin-left: 216px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="leftsidebar">
+            <ul id="menulist">
+                <li class="menuitem">Menu-item 1</li>
+                <li class="menuitem">Menu-item 2</li>
+                <li class="menuitem">Menu-item 3</li>
+                <li class="menuitem">Menu-item 4</li>
+                <li class="menuitem">Menu-item 5</li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <h1>Resize the browser window to see the effect!</h1>
+            <p>이 예는 페이지 왼쪽으로 이동하는 메뉴를 보여줍니다.
+                뷰포트가 480픽셀 이상인 경우, 뷰포트가 480픽셀 미만인 경우,
+                메뉴가 콘텐츠 위에 있습니다.</p>
+        </div>
+    </div>
+</body>
+
+</html>
