@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>변수 선언 및 사용</title>
+</head>
+
+<body>
+    <h2>변수 선언 및 사용</h2>
+    <p>let키워드는 지역의 의미가 있다.</p>
+    <p id="demo" style="border:1px solid #000;"></p>
+    <script>
+        setTimeout(function () {
+            console.log('Works!');
+        }, 3000);
+        let x = 10;
+        document.write("전역x1: " + x + "<br>");
+        {
+            let x = 2;
+            document.write("지역x: " + x + "<br>");
+        }
+        document.getElementById("demo").innerHTML = x;
+        document.write("전역x2: " + x + "<br>");
+    </script>
+</body>
+
+</html>
