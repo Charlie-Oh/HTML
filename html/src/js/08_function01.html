@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>function01</title>
+    <style>
+        #demo {
+            text-decoration: underline;
+            font-weight: bolder;
+            color: red;
+        }
+    </style>
+    <script>
+        // func1(); 호이스팅 안됨
+        var func1 = function () {
+            document.write("익명 함수<br>");
+        };
+        func1(); // 익명함수 호출(실행)
+
+        func2(); // 선언적(사용자 정의) 함수 호출(실행)
+        function func2() {
+            document.write("선언적 함수<br>");
+        }
+    </script>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        // 매개변수가 있는 익명함수 사용
+        const x = function (a, b) { return a * b };
+        document.getElementById("demo").innerHTML = x(4, 3);
+    </script>
+</body>
+
+</html>

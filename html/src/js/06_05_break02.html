@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <title>break02</title>
+</head>
+
+<body>
+    <h1>break 문</h1>
+    <script>
+        gugudan:
+        for (var i = 2; i <= 9; i++) {
+            document.write(i + '단<br>');
+            dan:
+            for (var j = 1; j <= 9; j++) {
+                if (i > 3)
+                    break dan;
+                document.write(i + "*" + j + " = " + (i * j) + "<br>");
+                if (j == 9) document.write("<hr>");
+            }
+        }
+    </script>
+</body>
+
+</html>
