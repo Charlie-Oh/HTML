@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>탐색 선택자</title>
+
+    <script src=js/jquery.js>
+    </script>
+    <script>
+        function exeFnc() {
+            $(".wrap_1 p.active").removeClass("active").addClass("on");
+
+
+            //attr("속성명", "속성값") : 해당 요소에 해당 속성과 값을 설정한다.
+            //.attr("속성명") => 해당 속성의 값을 가져와라
+            //.attr("속성명", "속성값") => 해당 속성을 해당 속성값으로 설정해라
+            $(".wrap_1 p:eq(2) a").attr("href", "http://www.naver.com"); //attr : attribute의 약자
+
+
+            //val("값") : 해당 요소에 값을 설정한다.
+            //val("속성값") : 해당 요소에 속성값을 설정해라
+            //val() : 해당 속성에 있는 값을 가져와라
+            $(".wrap_1 p:eq(3) input").val("Korea"); //val : value라는 속성
+
+
+            //after("요소") : 해당 요소 뒤에 추가할 요소를 넣는다.
+            $(".wrap_2 p:eq(1)").after("<p>After(추가1)</p>");
+
+
+            //before("요소") : 해당 요소 앞에 추가할 요소를 넣는다.
+            $(".wrap_2 p:eq(1)").before("<p>Before(추가2)</p>");
+
+
+            //unwrap() : 선택한 요소의 부모 요소를 삭제한다.
+            //wrapInner() : 선택한 요소의 자식 요소를 감싼다.
+            $(".wrap_3 p").unwrap().wrapInner("<strong>"); //이거하면 div태그 없어짐 + strong태그로 감싸짐(46~49번째 줄)
+
+
+            $('button').hide();
+
+            //55번째줄에 <img>에 cutedog jquery로 넣어보기
+            $(".wrap_1 p:eq(4) img").attr("src", "../img/cute_dog.jpg");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrap_1">
+        <p>텍스트1</p>
+        <p class="active">내용2</p>
+        <p><a href="#">네이버</a></p>
+        <p><input type="text" value="Hello"></p>
+        <p><img></p>
+    </div>
+    <div class="wrap_2">
+        <p>내용5</p>
+        <p>내용6</p>
+    </div>
+    <div calss="wrap_3">
+        <div>
+            <p>내용7</p>
+            <p>내용8</p>
+        </div>
+    </div><br><br>
+    <button onclick="exeFnc()">제이쿼리 적용하기</button>
+</body>
+
+
+</html>
