@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>탭기능 구현</title>
+    <script src='js/jquery.js'></script>
+    <style>
+        div.menu {
+            float: left;
+            padding: 20px;
+            border-left: 1px solid #000;
+            border-top: 1px solid #000;
+            /* border-bottom: 1px solid #000; */
+        }
+        div:nth-child(3){border-right:1px solid #000;}
+        div.conDiv{width:500px;height:500px;border:1px solid #000;}
+    </style>
+    <script>
+        $(function(){
+            $("conDiv").not("first")
+        });
+    </script>
+</head>
+
+<body>
+    <div>
+        <div class="menu">메뉴1</div>
+        <div class="menu">메뉴2</div>
+        <div class="menu">메뉴3</div>
+        <div style="clear:left;"></div>
+        <div>
+            <div class="conDiv">메뉴1번 내용</div>
+            <div class="conDiv">메뉴2번 내용</div>
+            <div class="conDiv">메뉴3번 내용</div>
+        </div>
+    </div>
+</body>
+
+</html>

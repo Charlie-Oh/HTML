@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>click_img</title>
+    <script src='js/jquery.js'></script>
+    <style>
+        div {
+            height: 100vh;
+        }
+
+        span {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        var imgSizew = 546;
+        var imgSizeh = 567;
+        $(function () {
+            $("#dv").on("wheel", function (event) {
+                var wheel = event.originalEvent.wheelDelta;
+                console.log(imgSizew);
+                if (wheel > 0) {
+                    if (imgSizew >= 1000) return false;
+                    imgSizew += 27.3;
+                    imgSizeh += 28.35;
+                } else {
+                    if (imgSizew <= 192) { return false; }
+                    imgSizew -= 27.3;
+                    imgSizeh -= 28.35;
+                }
+                $("#img").css({ "width": imgSizew + "px" });
+                $("#img").css({ "height": imgSizeh + "px" });
+            });
+            $("#dv").on("mousedown", function (event) {
+                var mWhich = event.which;
+                console.log(mWhich);
+                if (mWhich == 2) {
+                    imgSizew=546;
+                    imgSizeh=567;
+                    $("#img").css({ "width": imgSizew, "height": imgSizeh });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>마우스 휠 조작</h1>
+    휠 위로:<span>확대,</span> 휠 클릭: <span>100%,</span> 휠 아래로: <span>축소</span>
+    <div id="dv">
+        <br><img id="img" src="img/cute_dog.jpg">
+    </div>
+</body>
+
+</html>

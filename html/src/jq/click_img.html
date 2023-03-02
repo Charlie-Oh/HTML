@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>click_img</title>
+    <script src='js/jquery.js'></script>
+    <style>
+    </style>
+    <script>
+        $(function () {
+            var imgSizew = 546;
+            var imgSizeh = 567;
+            $(".zBtn .btn").on("click", zInOut);
+
+            function zInOut() {
+                console.log(imgSizew);
+
+                if ($(this).hasClass("zOut")) {
+                    if (imgSizew <= 150) return false;
+                    imgSizew -= 27.3;
+                    imgSizeh -= 28.35;
+                } else if ($(this).hasClass("zIn")) {
+                    if (imgSizew >= 1000) return false;
+                    imgSizew += 27.3;
+                    imgSizeh += 28.35;
+                } else {
+                    imgSizew = 546;
+                    imgSizeh = 567;
+                }
+                $("#img").css({ "width": imgSizew + "px" });
+                $("#img").css({ "height": imgSizeh + "px" });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <p class="zBtn">
+        <button class="btn zOut">-</button>
+        <button class="btn originBtn">100%</button>
+        <button class="btn zIn">+</button>
+    </p>
+    <img id="img" src="img/cute_dog.jpg">
+</body>
+
+</html>
