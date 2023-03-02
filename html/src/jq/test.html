@@ -6,30 +6,56 @@
     <title>탭기능 구현</title>
     <script src='js/jquery.js'></script>
     <style>
-        div.menu {
+        div.menuDiv {
             float: left;
-            padding: 20px;
+            padding: 5px 20px;
             border-left: 1px solid #000;
             border-top: 1px solid #000;
-            /* border-bottom: 1px solid #000; */
+            cursor:pointer;
         }
-        div:nth-child(3){border-right:1px solid #000;}
-        div.conDiv{width:500px;height:500px;border:1px solid #000;}
+
+        div.menuDiv:nth-child(3) {
+            border-right: 1px solid #000;
+        }
+
+        div#conDiv {
+            clear: left;
+            border: 1px solid#000;
+            height: 300px;
+        }
     </style>
     <script>
-        $(function(){
-            $("conDiv").not("first")
+        $(function () {
+            $(".conDiv").eq(0).show();
+            $(".conDiv").eq(0).siblings().hide();
+            $(".menuDiv").eq(0).css({backgroundColor:"#454545",color:"white"})
+
+            $(".menuDiv").hover(function(event){
+                var hv=event.originalEvent.hover;
+                console.log(hv);
+                if(hv=="undefined"){
+                $(this).css({backgroundColor:"#454545",color:"white"});
+            }else{
+                $(this).siblings().css({backgroundColor:"white",color:"black"});
+            }
+            });
+
+            $(".menuDiv").click(function(){
+                $(this).css({backgroundColor:"#454545",color:"white"});
+                $(this).siblings().css({backgroundColor:"white",color:"black"});
+                $(".conDiv").eq($(".menuDiv").index(this)).show();
+                $(".conDiv").eq($(".menuDiv").index(this)).siblings().hide();
+            });
         });
     </script>
 </head>
 
 <body>
     <div>
-        <div class="menu">메뉴1</div>
-        <div class="menu">메뉴2</div>
-        <div class="menu">메뉴3</div>
-        <div style="clear:left;"></div>
-        <div>
+        <div class="menuDiv">메뉴1</div>
+        <div class="menuDiv">메뉴2</div>
+        <div class="menuDiv">메뉴3</div>
+        <div id="conDiv" style="clear:left;border:1px solid #000;">
             <div class="conDiv">메뉴1번 내용</div>
             <div class="conDiv">메뉴2번 내용</div>
             <div class="conDiv">메뉴3번 내용</div>
